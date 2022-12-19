@@ -29,6 +29,10 @@ You can run the application directly in the VS Code interface using the '''run -
 
 The application will run on '''https://localhost:5001/'''
 
+### Resources
+
+PENDING - add here connection strings etc. 
+
 ### Standalone Snippets
 
 #### Run ARM Templates in Azure Shell
