@@ -29,5 +29,29 @@ You can run the application directly in the VS Code interface using the '''run -
 
 The application will run on '''https://localhost:5001/'''
 
+### Standalone Snippets
+
+#### Run ARM Templates in Azure Shell
+
+Assumes the arm template files are stored within the shell storage, so is not applicable for any CI/CD etc. Though this could work on an azure CLI.
+
+'''az deployment group create --resource-group opt-vm-rg --template-file template.json --parameters parameters.json'''
+
+
+
+
+
+
+## Note
+
+- You can export to an ARM template a given resource group, which might be useful in certain scenarios: https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/export-template-portal
+
+
+
+## TODO
+
+- I committed a lot of .net junk (debug et al) files. I am not a c# expert, so I committed everything given the application itself is not the critical part of my learning for this project.
+
+
 
 
