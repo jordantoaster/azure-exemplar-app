@@ -27,14 +27,11 @@ During setup, I got a few errors related to "OmniSharp" in the output window - '
 
 #### Locally
 
-You can run the application directly in the VS Code interface using the '''run -> Start Debugging''' click sequence. 
+You can run the a given application directly in the VS Code interface using the '''run -> Start Debugging''' click sequence. 
 
-The application will run on '''https://localhost:5001/'''
+The catalog (for example) application will run on '''https://localhost:5001/'''
 
-#### Publish Catalog App to an Azure VM
 
-- https://www.udemy.com/course/microsoft-azure-from-zero-to-hero-the-complete-guide/learn/lecture/24413374#overview
-- Highly manual and reflects an approach I would never repeat. 
 
 
 ### Resources
@@ -54,6 +51,10 @@ Assumes the arm template files are stored within the shell storage, so is not ap
 
 '''az deployment group create --resource-group opt-vm-rg --template-file template.json --parameters parameters.json'''
 
+#### Publish a Dot Net App Artifact
+
+You can create a deployable application artifact using the command '''dotnet publish -o publish''' in the terminal for a given application folder, whether catalog, inventory or other.
+
 
 ## Note
 
@@ -62,6 +63,12 @@ Assumes the arm template files are stored within the shell storage, so is not ap
 - RDP connecting to a VM can be a bit odd, where the password used does not actually allow access. I resolved this by resetting the password to a more secure, random sequence of letters, casing, numbers and symbols. 
 
 - When accesiong Ubuntu Machine via Putty, the password needs to be typed not copied. 
+
+- Azure app service is a fantastic tool for rapid deployment of web apps, see here for a Python example: https://learn.microsoft.com/en-us/azure/app-service/quickstart-python?tabs=flask%2Cwindows%2Cazure-cli%2Cvscode-deploy%2Cdeploy-instructions-azportal%2Cterminal-bash%2Cdeploy-instructions-zip-azcli#1---sample-application
+	- It is such a fantastic service that its almost free from requiring infrastructure as code, with easy CI processes and lite azure commands if done via CLI.
+
+
+
 
 ## TODO
 
