@@ -41,6 +41,15 @@ The catalog (for example) application will run on '''https://localhost:5001/'''
 
 You can do these actions in VSCode or via cli as desired. 
 
+#### Order
+
+- Download azure functions core tools.
+- Install vs code azure functions extension.
+- Run -> Run Without Debugging, terminal will show two urls for locally hosted functions:
+	- e.g. http://localhost:7071/api/ProcessOrderStorage
+- You can also use the Azure extension UI in the workspace tab to use the functions. 
+
+
 ### Resources
 
 - Catalog + Weather VM creds: jordanadmin + 4YSG4wDaJb2tSC!
@@ -73,6 +82,7 @@ Note: Assumes an image exists in ACR.
 - Set azure AKS cli tools to the path '''set PATH=%PATH%;"c:\Users\<USERNAME>\.azure-kubectl"'''
 - Get AKS cluster credentials - '''aks get-credentials --resource-group readit-app-rg --name cart-aks'''
 - Deploy container to AKS - '''kubectl apply -f deployment.yaml'''
+- From Azure ASK portal, in your deployed AKS app you can grab and view the app on the external ip. 
 
 
 
